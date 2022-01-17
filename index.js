@@ -1,6 +1,8 @@
 const base64Decode = require('fast-base64-decode')
 const { NativeModules, Platform } = require('react-native')
 
+const stringify = require('./stringify')
+
 const LINKING_ERROR =
   `The package 'react-native-random-uuid' doesn't seem to be linked. Make sure: \n\n` +
   Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
