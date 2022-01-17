@@ -1,5 +1,5 @@
 const base64Decode = require('fast-base64-decode')
-const { NativeModules } = require('react-native')
+const { NativeModules, Platform } = require('react-native')
 
 const LINKING_ERROR =
   `The package 'react-native-random-uuid' doesn't seem to be linked. Make sure: \n\n` +
