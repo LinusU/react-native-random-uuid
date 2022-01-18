@@ -16,7 +16,7 @@ function randomUUID () {
   if (NativeModules.ExpoRandom) {
     const data = new Uint8Array(16)
 
-    base64Decode(NativeModules.ExpoRandom.getRandomBase64String(32), data)
+    base64Decode(NativeModules.ExpoRandom.getRandomBase64String(16), data)
     data[6] = (data[6] & 0x0f) | 0x40
     data[8] = (data[8] & 0x3f) | 0x80
 
