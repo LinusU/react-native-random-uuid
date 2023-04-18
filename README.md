@@ -29,4 +29,4 @@ console.log(crypto.randomUUID())
 
 The `randomUUID()` method of the `Crypto` interface is used to generate a v4 [UUID](https://developer.mozilla.org/en-US/docs/Glossary/UUID) using a cryptographically secure random number generator.
 
-Returns a stirng containing a randomly generated, 36 character long v4 UUID.
+Returns a string containing a randomly generated, 36 character long v4 UUID.
