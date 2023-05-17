@@ -13,6 +13,13 @@ function randomUUID () {
     return NativeModules.RandomUuid.getRandomUuid()
   }
 
+  // Expo SDK 48+
+  if (global.expo && global.expo.modules && global.expo.modules.ExpoCrypto && global.expo.modules.ExpoCrypto.randomUUID) {
+    // ExpoCrypto.randomUUID() sometimes returns uppercase UUIDs, so we convert them to lowercase
+    return global.expo.modules.ExpoCrypto.randomUUID().toLowerCase()
+  }
+
+  // Expo SDK 41-47
   if (NativeModules.ExpoRandom) {
     const data = new Uint8Array(16)
 
